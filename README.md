@@ -2,6 +2,9 @@ AtlexCloud Extention
 ====================
 AtlexCloud Yii2 Extention FTP SWIFT OpenStack
 
+
+![alt AtlexCloudWidget](https://github.com/AtlexLib/yii2-atlexcloud/blob/master/example.png)
+
 Installation
 ------------
 
