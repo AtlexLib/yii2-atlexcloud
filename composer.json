@@ -1,0 +1,22 @@
+{
+    "name": "atlexlib/yii2-atlexcloud",
+    "description": "AtlexCloud Yii2 Extention FTP SWIFT OpenStack",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","cloud","swift","openstack","ftp"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Atlex.ru",
+            "email": "developer@atlex.ru"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0",
+        "atlex/atlexcloud": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\modules\\atlex\\": ""
+        }
+    }
+}
