@@ -28,8 +28,8 @@ class AtlexCloudWidget extends Widget
 
         $bundle = AtlexAssetBundel::register($this->view);
 
-        $localUrl = Url::to(['default/local']);
-        $remoteUrl = Url::to(['default/remote']);
+        $localUrl = Url::to(['/atlexcloud/default/local']);
+        $remoteUrl = Url::to(['/atlexcloud/default/remote']);
 
         $this->view->registerJs(" var atlLocalUrl = '{$localUrl}';  var atlRemoteUrl = '{$remoteUrl}';"
             , View::POS_HEAD);
