@@ -26,7 +26,7 @@ to the require section of your `composer.json` file.
 
 
 
-Register Modul in config/web.php
+Register Module in config/web.php
 -----
 ```php
 $config['modules']['atlexcloud'] = [
