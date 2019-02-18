@@ -1,0 +1,64 @@
+
+.glyphicon {
+    color: #2b669a;
+}
+
+.remote-path-panel, .local-path-panel{
+    margin-bottom: 10px;
+}
+
+div.disabled, div.disabled button, div.disabled i.glyphicon{
+    color:#c0c0c0;
+}
+
+.atlprocessing{
+    display: none;
+}
+
+div.disabled .atlprocessing{
+    display: inline;
+}
+
+.atlborder{
+    border-radius: 5px;
+    border: 1px solid #c0c0c0;
+    padding: 2px;
+    margin: 0px;
+}
+
+.atlbutton{
+    border-radius: 5px;
+    border: 1px solid #c0c0c0;
+    padding: 2px;
+    margin: 1px;
+}
+
+.path-button{
+    border: 0px;
+    background: transparent;
+    margin: 0px;
+    color: #2b669a;
+    font-weight: bold;
+    display: inline;
+    padding: 2px;
+    cursor: pointer;
+}
+.atl-bordered{
+    border-radius: 2px;
+    border: 1px solid #c0c0c0;
+}
+
+.atlobject{
+    cursor: pointer;
+}
+
+div#atlex_widget .object_container{
+    height: 200px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+div.atl-processes-panel{
+    padding: 1px;
+    margin-top: 4px;
+}
