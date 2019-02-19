@@ -38,9 +38,11 @@ class DefaultController extends Controller
         $params = \Yii::$app->params['atlexcloud'];
         $this->projectId = $params['project'];
         $this->taskId = "__atl_tasks_" . $params['project'];
-        $this->basePath = \Yii::$app->basePath . DIRECTORY_SEPARATOR . $params['local_folder'];
+        $this->basePath = \Yii::getAlias('@runtime') . DIRECTORY_SEPARATOR . $params['local_folder'];
 
-
+        if (!file_exists($this->basePath)) {
+            mkdir($this->basePath, 0777);
+        }
 
         $adapterType = $params['default_adapter']; // s3 | openstack | ftp
         $adapter = null;
@@ -372,7 +374,7 @@ class DefaultController extends Controller
 
         foreach($files as $key => $value){
             $path = $dir.DIRECTORY_SEPARATOR.$value;
-            $relPath = $this->getRelativePath(\Yii::$app->basePath. DIRECTORY_SEPARATOR . 'local_storage', $dir.DIRECTORY_SEPARATOR.$value);
+            $relPath = $this->getRelativePath($this->basePath, $dir.DIRECTORY_SEPARATOR.$value);
             if(!is_dir($path)) {
                 $results[] = [
                     'type' => 'file',
@@ -387,7 +389,7 @@ class DefaultController extends Controller
                     'type' => 'dir',
                     't' => CloudObjectType::CONTAINER,
                     'name' => $value,
-                    'path' => $this->getRelativePath(\Yii::$app->basePath. DIRECTORY_SEPARATOR . 'local_storage', $dir.DIRECTORY_SEPARATOR.$value),
+                    'path' => $this->getRelativePath($this->basePath, $dir.DIRECTORY_SEPARATOR.$value),
                     'key'  => 'l' . implode(unpack("H*", '_local' . $relPath)),
                 ];
 
