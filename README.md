@@ -51,7 +51,7 @@ return [
     'atlexcloud' => [
 
         'project' => 'your-cloud-project',
-        'local_folder' => 'local_storage', //[root path of current Yii project] / local_storage  create folder and set full permission chmod 777
+        'local_folder' => 'local_storage', // @runtime / local_storage 
 
         'openstack' => [
             'url' => 'https://your-url',
